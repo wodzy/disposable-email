@@ -1,4 +1,25 @@
+# macOS
 *.DS_Store
 .AppleDouble
 .LSOverride
-.idea/*
+
+# IDE / editor tooling
+/.idea
+/.vscode
+/.claude
+
+# Composer
+/vendor/
+composer.lock
+
+# PHPUnit
+/.phpunit.cache/
+/.phpunit.result.cache
+/build/
+.phpunit.coverage.xml
+
+# PHP CS Fixer
+/.php-cs-fixer.cache
+
+# PHPStan
+/.phpstan.cache
