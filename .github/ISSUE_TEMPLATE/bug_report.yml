@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible problem in MailSentry
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in the sections
+        below so the issue can be reproduced quickly.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: isBlacklisted('a@example.com') returned false but I expected true...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: A minimal code snippet that reproduces the problem.
+      render: php
+      placeholder: |
+        $validator = new Wodzy\MailSentry\Validator(['example.com']);
+        var_dump($validator->isBlacklisted('user@example.com'));
+    validations:
+      required: true
+  - type: input
+    id: php-version
+    attributes:
+      label: PHP version
+      placeholder: "8.3.10"
+    validations:
+      required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: MailSentry version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: ext-intl
+    attributes:
+      label: Is ext-intl enabled?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true

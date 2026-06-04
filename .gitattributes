@@ -5,10 +5,10 @@
 /.gitignore                export-ignore
 /.php-cs-fixer.dist.php    export-ignore
 /CHANGELOG.md              export-ignore
-/code-review.md            export-ignore
 /example.php               export-ignore
 /phpstan.neon.dist         export-ignore
 /phpunit.xml.dist          export-ignore
+/SECURITY.md               export-ignore
 
 *.php text eol=lf
 *.json text eol=lf

@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] (1.0.0, MailSentry)
+## [Unreleased]
+
+## [1.0.0] - 2026-06-03
 
 > **Rebranding:** the project formerly known as
 > `wodzy/email-domain-blacklist-checker` (namespace
@@ -19,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   IDN, IP-literals and quoted local-parts.
 - PHPStan (level 10) and PHP-CS-Fixer configurations.
 - GitHub Actions CI matrix (PHP 8.2 / 8.3 / 8.4, lowest + highest deps).
-- `Validator::withDefaultBlacklist()` factory using a bundled list of ~180
+- `Validator::withDefaultBlacklist()` factory using a bundled list of 195
   well-known disposable-email providers. The list is parsed once per process
   and memoized.
 - `Validator::fromFile()` factory.
@@ -72,3 +74,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Legacy releases under the original `wodzy/email-domain-blacklist-checker`
 name. No detailed changelog was maintained prior to the MailSentry rebranding.
+
+[Unreleased]: https://github.com/wodzy/MailSentry/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/wodzy/MailSentry/releases/tag/v1.0.0

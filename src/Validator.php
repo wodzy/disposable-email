@@ -55,6 +55,13 @@ final class Validator implements ValidatorInterface, Countable
 
     /**
      * Build a validator from a JSON file with the shape `{"domains": ["a.com", ...]}`.
+     *
+     * The caller is responsible for the trustworthiness of `$path`: it is read
+     * as-is and is never derived from end-user input by this library. Do not
+     * pass an unvalidated, user-controlled path.
+     *
+     * @throws BlacklistFileNotFoundException    when the file does not exist or is not readable.
+     * @throws InvalidBlacklistFormatException   when the file is not valid JSON or lacks a "domains" array.
      */
     public static function fromFile(string $path): self
     {

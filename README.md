@@ -56,6 +56,12 @@ $validator->isBlacklisted('user@foo.mailinator.com');  // true (subdomain match)
 The default list is parsed from disk only once per process and reused across
 calls.
 
+> The bundled list (`src/data/disposable_domains.json`) is a manually curated,
+> alphabetically sorted set of well-known disposable-email providers at the
+> eTLD+1 granularity. It is intentionally conservative. To add or remove a
+> provider, open a pull request editing that file — entries are kept lowercase
+> and sorted.
+
 ### Using your own JSON file
 
 The file must look like:

@@ -8,6 +8,9 @@
 /.vscode
 /.claude
 
+# Personal working notes (not for publication)
+/todo.md
+
 # Composer
 /vendor/
 composer.lock
