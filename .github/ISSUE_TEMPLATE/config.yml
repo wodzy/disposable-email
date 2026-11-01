@@ -3,6 +3,6 @@ contact_links:
   - name: Security vulnerability
     url: https://github.com/wodzy/disposable-email/security/advisories/new
     about: Please report security issues privately, not as public issues. See SECURITY.md.
-  - name: Question / usage help
-    url: https://github.com/wodzy/disposable-email/discussions
-    about: For general questions and usage help, please use Discussions.
+  - name: Usage documentation
+    url: https://github.com/wodzy/disposable-email#usage
+    about: Installation, usage and matching rules are documented in the README.
