@@ -68,4 +68,7 @@ First release as `wodzy/disposable-email`. Rename this section to
 Legacy releases under the original `wodzy/email-domain-blacklist-checker`
 name. No detailed changelog was maintained prior to the DisposableEmail rebranding.
 
-[Unreleased]: https://github.com/wodzy/disposable-email/commits/main
+[Unreleased]:
+  https://github.com/wodzy/disposable-email/compare/v1.0.0...HEAD
+[1.0.0]:
+  https://github.com/wodzy/disposable-email/releases/tag/v1.0.0
