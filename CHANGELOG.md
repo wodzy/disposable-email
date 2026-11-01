@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-First release as `wodzy/disposable-email`. Rename this section to
-`## [1.0.0] - YYYY-MM-DD` when tagging `v1.0.0`.
+## [1.0.0] - 2026-10-31
+
+First release as `wodzy/disposable-email`.
 
 > **Rebranding:** the project formerly known as
 > `wodzy/email-domain-blacklist-checker` (namespace
@@ -68,7 +69,5 @@ First release as `wodzy/disposable-email`. Rename this section to
 Legacy releases under the original `wodzy/email-domain-blacklist-checker`
 name. No detailed changelog was maintained prior to the DisposableEmail rebranding.
 
-[Unreleased]:
-  https://github.com/wodzy/disposable-email/compare/v1.0.0...HEAD
-[1.0.0]:
-  https://github.com/wodzy/disposable-email/releases/tag/v1.0.0
+[Unreleased]: https://github.com/wodzy/disposable-email/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/wodzy/disposable-email/releases/tag/v1.0.0
