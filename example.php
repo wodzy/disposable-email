@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Wodzy\MailSentry\Exception\InvalidEmailException;
-use Wodzy\MailSentry\Validator;
+use Wodzy\DisposableEmail\Blocklist;
+use Wodzy\DisposableEmail\DomainSet;
+use Wodzy\DisposableEmail\Exception\InvalidEmailException;
 
-// 1. Use the bundled disposable-email blacklist.
-$validator = Validator::withDefaultBlacklist();
+// 1. Use the bundled disposable-email list.
+$blocklist = Blocklist::bundled();
 
 $emails = [
     'john.doe@yopmail.com',
@@ -19,15 +20,23 @@ $emails = [
 
 foreach ($emails as $email) {
     try {
-        $blocked = $validator->isBlacklisted($email);
+        $blocked = $blocklist->blocks($email);
     } catch (InvalidEmailException $e) {
         printf("- %-40s INVALID (%s)\n", $email, $e->getMessage());
         continue;
     }
 
-    printf("- %-40s %s\n", $email, $blocked ? 'BLACKLISTED' : 'ok');
+    printf("- %-40s %s\n", $email, $blocked ? 'BLOCKED' : 'ok');
 }
 
-// 2. Or build from your own file / in-memory list.
-$custom = new Validator(['example.com', 'spam.test']);
-var_dump($custom->isBlacklisted('hello@example.com')); // true
+// 2. Combine lists, and exempt some domains.
+$custom = new Blocklist(
+    DomainSet::bundled()->merge(new DomainSet(['spam.test'])),
+    new DomainSet(['partner.yopmail.com']),
+);
+var_dump($custom->blocks('hello@spam.test'));            // true
+var_dump($custom->blocks('hello@partner.yopmail.com'));  // false
+
+// 3. DomainSet is a plain domain matcher, e.g. for an allow-only policy.
+$company = new DomainSet(['company.com']);
+var_dump($company->matches('jane@paris.company.com'));   // true

@@ -15,7 +15,7 @@ Please **do not** open a public GitHub issue for security vulnerabilities.
 
 Instead, report them privately:
 
-- Preferred: open a [GitHub security advisory](https://github.com/wodzy/MailSentry/security/advisories/new)
+- Preferred: open a [GitHub security advisory](https://github.com/wodzy/disposable-email/security/advisories/new)
   on this repository, or
 - Email **hello@oukaci.com** with the details.
 
@@ -31,7 +31,7 @@ credited unless they prefer to remain anonymous.
 
 ## Scope
 
-MailSentry performs **syntactic** email checks and blacklist membership lookups.
+DisposableEmail performs **syntactic** email checks and domain list lookups.
 It is **not** an authentication or anti-fraud boundary on its own and does not
 verify mailbox existence or deliverability. Reports about the inherent
 limitations documented in the README (no Public Suffix List resolution,

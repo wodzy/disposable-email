@@ -10,7 +10,7 @@
          displayDetailsOnTestsThatTriggerNotices="true"
          displayDetailsOnTestsThatTriggerDeprecations="true">
     <testsuites>
-        <testsuite name="MailSentry">
+        <testsuite name="DisposableEmail">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

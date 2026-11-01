@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Wodzy\MailSentry\Exception;
+namespace Wodzy\DisposableEmail\Exception;
 
 use Throwable;
 use UnexpectedValueException;
 
-final class InvalidBlacklistFormatException extends UnexpectedValueException implements MailSentryException
+final class InvalidDomainListFormatException extends UnexpectedValueException implements DisposableEmailException
 {
     public static function malformedJson(string $path, ?Throwable $previous = null): self
     {
         return new self(
-            sprintf('Blacklist file "%s" does not contain valid JSON.', $path),
+            sprintf('Domain list file "%s" does not contain valid JSON.', $path),
             0,
             $previous
         );
@@ -21,7 +21,7 @@ final class InvalidBlacklistFormatException extends UnexpectedValueException imp
     public static function missingDomainsKey(string $path): self
     {
         return new self(
-            sprintf('Blacklist file "%s" must contain a "domains" array at the root.', $path)
+            sprintf('Domain list file "%s" must contain a "domains" array at the root.', $path)
         );
     }
 }
