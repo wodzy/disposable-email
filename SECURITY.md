@@ -17,7 +17,7 @@ Instead, report them privately:
 
 - Preferred: open a [GitHub security advisory](https://github.com/wodzy/disposable-email/security/advisories/new)
   on this repository, or
-- Email **hello@oukaci.com** with the details.
+- Email **contact@oukaci.com** with the details.
 
 Please include:
 
